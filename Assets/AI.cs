@@ -73,3 +73,5 @@ public class AI : MonoBehaviour {
 		stateMachine.Update ();
 	}
 }
+
+// Deciding whether to use Time variable or distance variable
