@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AI.cs" />
+     <Compile Include="Assets\AttackState.cs" />
      <Compile Include="Assets\ChaseState.cs" />
      <Compile Include="Assets\DetectionState.cs" />
      <Compile Include="Assets\EnemyBehaviour.cs" />
@@ -57,6 +58,7 @@
      <Compile Include="Assets\PatrolState.cs" />
      <Compile Include="Assets\PlayerController2D.cs" />
      <Compile Include="Assets\PlayerHealthBehaviour.cs" />
+     <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\SecondState.cs" />
      <Compile Include="Assets\Statemachine.cs" />
  <Reference Include="UnityEngine.UI">
