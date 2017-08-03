@@ -34,14 +34,15 @@ public class AI : MonoBehaviour {
 	[Header("Chase Variables")]
 	public float chaseRange = 5;
 	public float chaseSpeed = 2;
+	public float backChaseRange = 2;
 
 	//Attack State Variables
 	[Space]
 	[Header("Attack Variables")]
-	public float attackRange;
+	public float attackRange = 3;
 	public float attackSpeed;
 	public float attackDamage;
-	// Use this for initialization
+
 	private void Start () {
 		stateMachine = new StateMachine<AI> (this);
 		target = GameObject.FindGameObjectWithTag ("Player");

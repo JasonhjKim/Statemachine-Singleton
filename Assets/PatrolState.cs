@@ -40,19 +40,27 @@ public class PatrolState : State<AI> {
 		} else {
 			_owner.stateMachine.ChangeState (IdleState.Instance);
 		}
-		RaycastHit2D hit = Physics2D.Raycast (_owner.transform.position, Vector2.right * direction, _owner.detectionRange, 1 << LayerMask.NameToLayer("Player"));
-		Debug.DrawRay (_owner.transform.position, Vector2.right * direction * _owner.detectionRange, Color.blue);
-		if (hit) {
-			if (hit.collider.tag  == _owner.target.tag) {
+		RaycastHit2D frontHit = Physics2D.Raycast (_owner.transform.position, Vector2.right * direction, _owner.chaseRange, 1 << LayerMask.NameToLayer("Player"));
+		Debug.DrawRay (_owner.transform.position, Vector2.right * direction * _owner.chaseRange, Color.blue);
+		if (frontHit) {
+			if (frontHit.collider.tag  == _owner.target.tag) {
 				Debug.Log ("Player found");
 				_owner.stateMachine.ChangeState (ChaseState.Instance);
 			}
 
-			if (hit.collider.tag != _owner.target.tag) {
+			if (frontHit.collider.tag != _owner.target.tag) {
 				Debug.Log ("Searching....");
 				_owner.movespeed = 1.5f;
 			}
 		}
+
+		RaycastHit2D backHit = Physics2D.Raycast (_owner.transform.position, Vector2.right * direction * (-1), _owner.backChaseRange, 1<< LayerMask.NameToLayer("Player"));
+		Debug.DrawRay (_owner.transform.position, Vector2.right * direction * (-1) * _owner.backChaseRange, Color.cyan);
+
+		if (backHit) {
+			Debug.Log ("Hit on the back");
+		}
+
 	}
 	private void NextDirection() {
 
