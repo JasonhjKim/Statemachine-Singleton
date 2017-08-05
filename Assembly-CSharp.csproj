@@ -47,20 +47,17 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AI.cs" />
-     <Compile Include="Assets\AttackState.cs" />
-     <Compile Include="Assets\ChaseState.cs" />
-     <Compile Include="Assets\DetectionState.cs" />
      <Compile Include="Assets\EnemyBehaviour.cs" />
      <Compile Include="Assets\EnemyHealthBehaviour.cs" />
-     <Compile Include="Assets\FirstState.cs" />
      <Compile Include="Assets\HealthUIHandler.cs" />
-     <Compile Include="Assets\IdleState.cs" />
-     <Compile Include="Assets\PatrolState.cs" />
      <Compile Include="Assets\PlayerController2D.cs" />
      <Compile Include="Assets\PlayerHealthBehaviour.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
-     <Compile Include="Assets\SecondState.cs" />
      <Compile Include="Assets\Statemachine.cs" />
+     <Compile Include="Assets\States\AttackState.cs" />
+     <Compile Include="Assets\States\ChaseState.cs" />
+     <Compile Include="Assets\States\IdleState.cs" />
+     <Compile Include="Assets\States\PatrolState.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
